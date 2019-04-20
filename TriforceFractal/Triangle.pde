@@ -26,21 +26,19 @@ class Triangle{
     triangle(x, y, x + l, y , x + l/2, y + h);
     
     if(b > 0){
-      Triangle tri1;
-      Triangle tri2;
-      Triangle tri3;
+      Triangle tri;
      
       //triangle 1    
-      tri1 = new Triangle(x, y, l/2, b-1, a+5);
-      tri1.inst();
+      tri = new Triangle(x, y, l/2, b-1, a+5);
+      tri.inst();
       
       //triangle 2    
-      tri2 = new Triangle(x + l/2, y, l/2, b-1, a+5);
-      tri2.inst();
+      tri = new Triangle(x + l/2, y, l/2, b-1, a+5);
+      tri.inst();
       
       //triangle 3
-      tri3 = new Triangle(x + l/4, y + h/2, l/2, b-1, a+5);
-      tri3.inst();    
+      tri = new Triangle(x + l/4, y + h/2, l/2, b-1, a+5);
+      tri.inst();    
     }  
   } 
 }
