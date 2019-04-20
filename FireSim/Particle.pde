@@ -34,6 +34,6 @@ class Particle {
   }
   
   void cool(float x){
-    a = -x;
+    a -= x;
   }
 }
