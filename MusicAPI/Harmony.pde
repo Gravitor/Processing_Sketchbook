@@ -1,3 +1,4 @@
+import processing.sound.*;
 class Scale {
   int deg;
   String[] scaleDef;
@@ -46,5 +47,6 @@ class Chord {
     type = type_;
   }
 
-  void Play() {}
+  void Play() {
+  }
 }
