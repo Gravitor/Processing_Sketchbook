@@ -1,6 +1,7 @@
 ArrayList<Particle> particles = new ArrayList<Particle>();
 NoiseField field = new NoiseField(10, 0.04);
 
+int recFrames = 0;
 float speed = 2;
 int cycles = 0;
 float iter = 0;
@@ -12,8 +13,14 @@ void setup() {
   field.genField(0);
 }
 
+void keyPressed(){
+  if(key == ' '){
+    field.startRecording();
+  }
+}
+
 void draw() {
-  println(frameRate);
+  //println(frameRate + " fps");
   background(0);
   if (cycles % 1 == 0) {
     for (int i = 0; i < width; i++) {
@@ -33,6 +40,12 @@ void draw() {
   cycles++;
   iter += 0.1;
   field.genField(iter);
+  
+  
+  if(field.recording){
+    saveFrame("caputre/FireSim_" + ++recFrames + ".png");  
+    println("recorded " + recFrames + " frames");
+  }  
 
   /*                                                 <--- visualize perlin noise field
    
